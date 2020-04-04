@@ -6,13 +6,7 @@ import { useConfigureLeaflet, useMapServices, useRefEffect } from 'hooks';
 import { isDomAvailable } from 'lib/util';
 
 const Map = (props) => {
-  const {
-    children,
-    className,
-    defaultBaseMap = 'OpenStreetMap',
-    mapEffect,
-    ...rest
-  } = props;
+  const { children, className, defaultBaseMap = 'OpenStreetMap', mapEffect, ...rest } = props;
 
   const mapRef = useRef();
 
@@ -37,7 +31,7 @@ const Map = (props) => {
   if (!isDomAvailable()) {
     return (
       <div className={mapClassName}>
-        <p className='map-loading'>Loading map...</p>
+        <p className="map-loading">Loading map...</p>
       </div>
     );
   }
@@ -52,18 +46,17 @@ const Map = (props) => {
       <BaseMap ref={mapRef} {...mapSettings}>
         {children}
         {basemap && <TileLayer {...basemap} />}
-        <ZoomControl position='bottomright' />
+        <ZoomControl position="bottomright" />
       </BaseMap>
     </div>
   );
 };
 
 Map.propTypes = {
-  center: PropTypes.array,
   children: PropTypes.node,
-  map: PropTypes.string,
-  zoom: PropTypes.number,
   className: PropTypes.string,
+  defaultBaseMap: PropTypes.string,
+  mapEffect: PropTypes.func,
 };
 
 export default Map;
