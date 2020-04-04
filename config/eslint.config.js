@@ -29,7 +29,8 @@ module.exports = {
 
   rules: {
     'arrow-parens': ['error', 'always'],
-    'linebreak-style': 0, //['error', 'windows'],
+    'eol-last': ['error', 'always'],
+    'linebreak-style': ['error', 'windows'],
     'max-len': ['error', { code: 120, ignoreUrls: true }],
     'no-eval': 'error',
     quotes: [
@@ -40,22 +41,21 @@ module.exports = {
         allowTemplateLiterals: true,
       },
     ],
-    'react/jsx-curly-spacing': 0,
-    // 'react/jsx-curly-spacing': [
-    //   'error',
-    //   {
-    //     attributes: {
-    //       when: 'never',
-    //     },
-    //     children: {
-    //       when: 'always',
-    //     },
-    //   },
-    // ],
+    'react/jsx-curly-spacing': [
+      'error',
+      {
+        attributes: {
+          when: 'never',
+        },
+        children: {
+          when: 'always',
+        },
+      },
+    ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     semi: ['error', 'always'],
-    'space-in-parens': 0, //['error', 'always', { exceptions: ['()', '[]', '{}'] }],
+    'space-in-parens': ['error', 'always', { exceptions: ['()', '[]', '{}'] }],
   },
 };
 

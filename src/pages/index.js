@@ -28,25 +28,25 @@ const IndexPage = () => {
    */
 
   function mapEffect({ leafletElement } = {}) {
-    if (!leafletElement) return;
+    if ( !leafletElement ) return;
 
     const popup = L.popup();
 
-    popup.setLatLng(LOCATION);
-    popup.setContent(`<p>Hello, ${LOCATION_NAME}!</p>`);
+    popup.setLatLng( LOCATION );
+    popup.setContent( `<p>Hello, ${LOCATION_NAME}!</p>` );
 
-    setTimeout(async () => {
-      await promiseToZoomIn(leafletElement, ZOOM);
+    setTimeout( async () => {
+      await promiseToZoomIn( leafletElement, ZOOM );
 
       const { current = {} } = markerRef || {};
       const { leafletElement: marker } = current;
 
-      marker.bindPopup(popup);
+      marker.bindPopup( popup );
 
       setTimeout(() => {
         marker.openPopup();
-      }, 4000);
-    }, 2000);
+      }, 4000 );
+    }, 2000 );
   }
 
   const mapSettings = {
