@@ -9,8 +9,8 @@ import Map from 'components/Map';
 import img_gatsby from 'assets/images/gatsby-astronaut.png';
 
 const DEFAULT_LOCATION = {
-  lat: 38.80585,
-  lng: -77.04127,
+  lat: 43.65348,
+  lng: -79.38393,
 };
 
 const CENTER = [DEFAULT_LOCATION.lat, DEFAULT_LOCATION.lng];
