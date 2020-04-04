@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gatsby build",
+    "clean": "gatsby clean",
     "develop": "gatsby develop",
     "lint": "Get started linting your code with Eslint and stylelint",
     "format": "Get started formatting your code with Eslint, Prettier, and stylelint",
