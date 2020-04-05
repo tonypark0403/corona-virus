@@ -31,6 +31,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "eslint-config-zurgbot": "^0.0.6",
     "gatsby": "^2.20.12",
     "gatsby-plugin-react-helmet": "^3.2.1",
@@ -45,6 +46,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
+    "react-icons": "^3.9.0",
     "react-leaflet": "^2.6.3"
   },
   "devDependencies": {
