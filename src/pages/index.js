@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Helmet from 'react-helmet';
 import L from 'leaflet';
 import { Marker } from 'react-leaflet';
@@ -42,11 +42,14 @@ const IndexPage = () => {
   const [location, setLocation] = useState( LOCATION );
   const [center, setCenter] = useState( CENTER );
 
-  navigator.geolocation.getCurrentPosition(( pos ) => {
-    const { latitude, longitude } = pos.coords;
-    setLocation({ lat: latitude, lng: longitude });
-    setCenter([latitude, longitude]);
-  });
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(( pos ) => {
+      const { latitude, longitude } = pos.coords;
+      setLocation({ lat: latitude, lng: longitude });
+      setCenter([latitude, longitude]);
+    });
+  }, []);
+
   /**
    * mapEffect
    * @description Fires a callback once the page renders
