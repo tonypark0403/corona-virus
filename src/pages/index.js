@@ -9,13 +9,12 @@ import Layout from 'components/Layout';
 import Container from 'components/Container';
 import Map from 'components/Map';
 
-import gatsby_astronaut from 'assets/images/gatsby-astronaut.png';
+import gatsby_astronaut from 'assets/images/gatsby-astronaut.jpg';
 
 const LOCATION = {
   lat: 43.65348,
   lng: -79.38393,
 };
-const LOCATION_NAME = 'Toronto, ON';
 const CENTER = [LOCATION.lat, LOCATION.lng];
 const DEFAULT_ZOOM = 2;
 const ZOOM = 10;
@@ -24,7 +23,7 @@ const timeToZoom = 2000;
 const timeToOpenPopupAfterZoom = 4000;
 const timeToUpdatePopupAfterZoom = timeToOpenPopupAfterZoom + 3000;
 
-const popupContentHello = `<p>Hello, ${LOCATION_NAME}!</p>`;
+const popupContentHello = `<p>Hello 👋</p>`;
 const popupContentGatsby = `
   <div class="popup-gatsby">
     <div class="popup-gatsby-image">
