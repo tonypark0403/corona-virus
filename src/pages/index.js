@@ -9,7 +9,7 @@ import Layout from 'components/Layout';
 import Container from 'components/Container';
 import Map from 'components/Map';
 
-import gatsby_astronaut from 'assets/images/gatsby-astronaut.jpg';
+import gatsby_astronaut from 'assets/images/gatsby-astronaut.png';
 
 const LOCATION = {
   lat: 43.65348,
